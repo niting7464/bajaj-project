@@ -2,22 +2,21 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT =  3000;
 
-// Middleware
+
 app.use(bodyParser.json());
 
-// Route: /bfhl
+
 app.post("/bfhl", (req, res) => {
   try {
     const data = req.body.data;
 
-    // Sample user details
+
     const user_id = "john_doe_17091999";
     const email = "john@xyz.com";
     const roll_number = "ABCD123";
 
-    // Arrays to store even numbers, odd numbers, and alphabets
     let even_numbers = [];
     let odd_numbers = [];
     let alphabets = [];
@@ -55,7 +54,7 @@ app.post("/bfhl", (req, res) => {
   }
 });
 
-// Start the server
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
